@@ -1,9 +1,9 @@
 import "../styles.css" 
 
-const SquareBox = () => {
+const SquareBox = ({value, userClick}) => {
     
   return (
-    <span className="box">X</span>
+    <button className="box" onClick={userClick}>{value? {value} :""}</button>
   );
 };
 export { SquareBox };
