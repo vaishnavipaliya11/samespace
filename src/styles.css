@@ -1,10 +1,14 @@
-.squares {
-  padding: 0.5em;
-  border: none;
-  font-size: 5rem;
-  cursor: pointer;
-  color: aqua;
-  border: 1px solid blue;
+:root{
+  --bg-clr:#31383F;
+  --primary-clr:#3aafdc;
+  --text-clr:#cbd5e1
+}
+
+body{
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--bg-clr);
+  color: var(--text-clr);
 }
 
   .common-row{
@@ -15,4 +19,49 @@
   .box{
     border: 3px solid skyblue;
     padding: 1.5em;
+  }
+  .play-board-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 1.5rem;
+    font-size: 3rem;
+  }
+  .play-btn{
+    width: 5rem;
+    height: 5rem;
+    font-size: 2.5rem;
+    border:1px solid var(--primary-clr) ;
+    color: var(--primary-clr);
+    background-color: transparent;
+  }
+  .header-container{
+    width: 100%;
+    position:fixed;
+  }
+  .game-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 1rem;
+    justify-items: center;
+  }
+ li{
+  list-style: none;
+  }
+  .move-btn{
+    font-size: 1.2rem;
+    padding: 0.5em;
+    cursor: pointer;
+    color: var(--primary-clr);
+    border: var(--primary-clr);
+    border-radius: 5px;
+    font-weight: 600;
+    margin: 0.5rem;
+  }
+  .move-btn:hover{
+    color:var(--text-clr);
+    background-color: var(--primary-clr);
+  }
+  .destination-btn-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { calculateWinner } from "../helpers/winner";
+import { Header } from "./Header";
 import { PlayBoard } from "./PlayBoard";
 
 const Game = () => {
@@ -12,15 +13,14 @@ const Game = () => {
   const handleClick = (i) => {
     const historyTillNow = userHistory.slice(0, stepNumber + 1);
     const current = historyTillNow[stepNumber];
-    
+
     const squares = [...current];
- 
-    if (winner || squares[i]) return
-      squares[i] = xO;
-      setUserHistory([...historyTillNow, squares]);
-      setStepNumber(historyTillNow.length);
-      setXUser(!XUser);
-    
+
+    if (winner || squares[i]) return;
+    squares[i] = xO;
+    setUserHistory([...historyTillNow, squares]);
+    setStepNumber(historyTillNow.length);
+    setXUser(!XUser);
   };
 
   const jumpTo = (step) => {
@@ -30,23 +30,36 @@ const Game = () => {
 
   const renderMoves = () =>
     userHistory.map((_step, move) => {
-      const destination = move ? `Go to move #${move}` : "Go to Start";
+      console.log(move);
+
+      const destination = move ? `Go to ${move}` : "Play Again";
       return (
-        <li key={move}>
-          <button onClick={() => jumpTo(move)}>{destination}</button>
+        <li key={move} >
+          <button className="move-btn" onClick={() => jumpTo(move)}>{destination}</button>
         </li>
       );
     });
 
   return (
-    <div>
-      <PlayBoard squares={userHistory[stepNumber]} onClick={handleClick} />
+    <>
+    {/* <div>
+    <Header/>
+    </div> */}
+    
+    <div className="game-container">
+      
+      <div>
+        <PlayBoard squares={userHistory[stepNumber]} onClick={handleClick} />
+      </div>
+
       <div>
         <h3>Game History</h3>
-        {renderMoves()}
-        <h2>{winner ? "Winner is :" + winner : "Next Player:" + xO}</h2>
+       <div className= "destination-btn-container">  {renderMoves()}</div>
+        <h4>{winner ? "Winner is :" + winner : "Next Player:" + xO}</h4>
+        {stepNumber === 9 && !winner ? "game over no one is winner" : ""}
       </div>
     </div>
+    </>
   );
 };
 export { Game };

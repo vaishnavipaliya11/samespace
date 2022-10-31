@@ -1,11 +1,11 @@
 import "../styles.css" 
 
 const SquareBox = ({ value, onClick }) => {
-  const style = value ? `squares ${value}` : `squares`;
+  // const style = value ? `squares ${value}` : `squares`;
 
   return (
-    <button className={style} onClick={onClick}>
-      {value}
+    <button className="play-btn" onClick={onClick}>
+      {value ? value : ""}
     </button>
   );
 };
