@@ -1,9 +1,12 @@
 import "../styles.css" 
 
-const SquareBox = ({value, userClick}) => {
-    
+const SquareBox = ({ value, onClick }) => {
+  const style = value ? `squares ${value}` : `squares`;
+
   return (
-    <button className="box" onClick={userClick}>{value? {value} :""}</button>
+    <button className={style} onClick={onClick}>
+      {value}
+    </button>
   );
 };
 export { SquareBox };

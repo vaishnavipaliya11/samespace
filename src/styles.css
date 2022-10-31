@@ -1,10 +1,11 @@
 .squares {
-    background: #272727;
-    border: none;
-    font-size: 5rem;
-    cursor: pointer;
-    outline: none;
-  }
+  padding: 0.5em;
+  border: none;
+  font-size: 5rem;
+  cursor: pointer;
+  color: aqua;
+  border: 1px solid blue;
+}
 
   .common-row{
     display: flex;

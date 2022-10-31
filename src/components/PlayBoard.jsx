@@ -1,18 +1,14 @@
-import { useState } from "react"
-import { SquareBox } from "./SquareBox"
+import { SquareBox } from "./SquareBox";
 
-const PlayBoard = ({squares, userClick}) =>{
-    const initalStateArray = ["","","","","","","","",""]
-    const [userGameState, setUserGameState]= useState(initalStateArray)
-    return(
-        <div className="play-board-container">
-            {squares.map((sq,i)=>{
-                return(
-                    <SquareBox value={sq} onClick={()=> userClick(i)}/>
-                )
-            })}
-            <button>Play Again</button>
-        </div>
-    )
-}
-export {PlayBoard}
+const PlayBoard = ({ squares, onClick }) => {
+  console.log(squares, "sq");
+  return (
+    <div className="play-board-container">
+       {squares.map((square, i) => (
+      <SquareBox key={i} value={square} onClick={() => onClick(i)} />
+    ))}
+      
+    </div>
+  );
+};
+export { PlayBoard };
