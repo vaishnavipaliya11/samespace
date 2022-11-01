@@ -28,7 +28,6 @@ const Game = () => {
 
   const renderMoves = () =>
     userHistory.map((_step, move) => {
-      console.log(move);
 
       const destination = move ? `Go to ${move}` : "Play Again";
       return (
