@@ -6,8 +6,11 @@ function App() {
  
   return (
     <div className="App">
-  
-      <Game/>
+      <div className='tic-tac-container'>
+        <Header/>
+        <Game/>
+      </div>
+      
     </div>
   );
 }

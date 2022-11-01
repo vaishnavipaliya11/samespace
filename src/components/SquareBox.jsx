@@ -1,3 +1,4 @@
+import "../components/index.css"
 import "../styles.css" 
 
 const SquareBox = ({ value, onClick }) => {

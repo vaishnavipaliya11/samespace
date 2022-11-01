@@ -1,3 +1,4 @@
+import "../components/index.css"
 const Header = () =>{
     return(
         <div className="header-container">

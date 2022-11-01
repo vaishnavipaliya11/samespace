@@ -32,32 +32,27 @@ const Game = () => {
 
       const destination = move ? `Go to ${move}` : "Play Again";
       return (
-        <li key={move} >
-          <button className="move-btn" onClick={() => jumpTo(move)}>{destination}</button>
+        <li key={move}>
+          <button className="move-btn" onClick={() => jumpTo(move)}>
+            {destination}
+          </button>
         </li>
       );
     });
 
   return (
-    <>
-    {/* <div>
-    <Header/>
-    </div> */}
-    
     <div className="game-container">
-      
       <div>
         <PlayBoard squares={userHistory[stepNumber]} onClick={handleClick} />
       </div>
 
       <div>
         <h3>Game History</h3>
-       <div className= "destination-btn-container">  {renderMoves()}</div>
+        <div className="destination-btn-container"> {renderMoves()}</div>
         <h4>{winner ? "Winner is :" + winner : "Next Player:" + xO}</h4>
         {stepNumber === 9 && !winner ? "game over no one is winner" : ""}
       </div>
     </div>
-    </>
   );
 };
 export { Game };
