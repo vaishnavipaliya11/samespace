@@ -47,10 +47,10 @@ const Game = () => {
       </div>
 
       <div>
-        <h3>Game History</h3>
+        <h2>Game History</h2>
         <div className="destination-btn-container"> {renderMoves()}</div>
-        <h4>{winner ? "Winner is :" + winner : "Next Player:" + xO}</h4>
-        {stepNumber === 9 && !winner ? "game over no one is winner" : ""}
+        <h3>{winner ? "Yeahh Winner is : " + winner : "Next Player: " + xO}</h3>
+       <h4>{stepNumber === 9 && !winner ? "Game Over no one is winner" : ""}</h4> 
       </div>
     </div>
   );

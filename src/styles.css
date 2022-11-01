@@ -16,21 +16,6 @@ body{
     flex-direction: row;
   }
 
-  /* .box{
-    border: 3px solid skyblue;
-    padding: 1.5em;
-  }
-
-
-  .header-container{
-    width: 100%;
-    position:fixed;
-  }
-
- 
-   */
-
-  /* app */
   .tic-tac-container{
     height: 100vh;
 
