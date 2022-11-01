@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { calculateWinner } from "../helpers/winner";
-import { Header } from "./Header";
 import { PlayBoard } from "./PlayBoard";
 
 const Game = () => {
-  const initalStateArray = ["", "", "", "", "", "", "", "", ""];
   const [userHistory, setUserHistory] = useState([Array(9).fill(null)]);
   const [stepNumber, setStepNumber] = useState(0);
   const [XUser, setXUser] = useState(true);
